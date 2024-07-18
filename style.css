@@ -1,0 +1,591 @@
+body {
+	background-color: #C3DDE2;
+	color: #13193F;
+	font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+	font-size: larger;
+	display: flex;
+	flex-direction: column;
+}
+
+figure > img {
+	width: 100%;
+	height: auto;
+}
+/* keeps the images on the right of the activities & festivals page at a viewable size for half the grid */
+
+figcaption {
+	font-style: italic;
+	font-size: smaller;
+}
+
+#logo {
+	margin: 10px 10px;
+	float: left;
+}
+
+#logo:hover {
+  transform: scale(1.15);
+}
+
+header > a > img {
+	width: 150px;
+	height: auto;
+}
+/* resizes the logo to be an appropriately small size in the top-left of the page */
+
+nav {
+	margin: 10px 10px;
+	padding: 15px 15px;
+	background-color: #F2EDE4;
+	border-radius: 10px;
+	display: inline;
+	float: right;
+	position: fixed;
+	right: 0;
+}
+
+nav > a, nav > div {
+	margin: 15px 15px;
+	padding: 10px 10px;
+	float: right;
+	display: inline;
+	background-color: #D8CEBA;
+	border-radius: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+
+nav > a:hover, nav > div:hover, .activitiesContent a:hover {
+	background-color: #D3BA89;
+	transform: scale(1.15); /* makes the button become bigger when the user hovers over the option */
+}
+
+a {
+	color: #13193F;
+}
+
+a:visited {
+  color:inherit;
+}
+/* makes <a> links not change colour after being visited */
+
+.dropdown {
+	position: relative;
+	display: inline;
+	float: right;
+}
+
+.activitiesDropdown {
+	background-color: #D8CEBA;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.activitiesContent {
+	text-align: center;
+	display: none;
+	position: absolute;
+	min-width: 205px;
+	z-index: 1;
+	margin: 5px auto auto -80px;
+}
+
+.activitiesContent a {
+	color: #13193F;
+	background-color: #D8CEBA; /* button colour */
+	border-radius: 5px;
+	padding: 10px 10px;
+	margin: 15px 15px;
+	text-decoration: none;
+	display: block;
+}
+
+.activitiesContent a:hover, .dropdown:hover .activitiesDropdown {
+  background-color: #D3BA89;
+}
+
+/* changes display style when hovering on the activities button, making it appear essentially*/
+.dropdown:hover .activitiesContent {
+	display: block;
+	background-color: rgba(216, 206, 186, 0.0);
+	padding: 25px 25px;
+}
+
+article, footer {
+	border-radius: 10px;
+	padding: 25px 25px;
+	margin: 10px 10px;
+}
+
+article {
+  background-color: rgba(242, 237, 228, 0.70);
+}
+
+footer {
+  background-color: rgba(225, 240, 243, 0.8);
+}
+
+mark {
+	color: #D3BA89;
+	background-color: #15241A;
+}
+/* used to highlight the H1 Headings on activities.html & festivals.html */
+
+.headingMargin {
+  margin: 10px 10px;
+}
+
+label {
+  font-style: oblique;
+}
+
+#username, #email {
+	width: 275px;
+	height: 30px;
+	margin: 10px auto;
+	border-radius: 3px;
+	border: 1px solid #13193F;
+}
+
+#submit {
+	font-size: large;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 150px;
+	height: 60px;
+	border-radius: 5px;
+	border: 3px solid #D3BA89;
+	background-color: #D8CEBA;
+}
+
+#submit:hover {
+	background-color: #D3BA89;
+	transform: scale(1.15);
+}
+
+/* container for only the text and email input */
+.containerForm {
+	display: grid;
+	grid-template-columns: 1fr 0.05fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 5px 5px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	"usernameEmail . ."
+	"usernameEmail . submitButton"
+	"usernameEmail . .";
+	width: auto;
+	height: auto;
+}
+
+.usernameEmail {
+  grid-area: usernameEmail;
+}
+
+.submitButton {
+  grid-area: submitButton;
+}
+
+/* container to format the text & email inputs AND the submit button */
+.containerFooter {
+	display: grid;
+	grid-template-columns: 1fr 0.5fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 5px 10px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	"newsletter . links";
+	width: auto;
+	height: auto;
+}
+
+.containerForm {
+  grid-area: newsletter;
+}
+
+.links {
+  grid-area: links;
+}
+
+.links > a {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.links > a:hover {
+	transform: scale(1.15);
+	font-weight: bold;
+}
+
+.containerAbout {  
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 0.5fr 0.5fr 1fr 0.25fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		". . ."
+		". . ."
+		"about . ."
+		". . .";
+	width: auto;
+	height: auto;
+  }
+
+.about { 
+	grid-area: about; 
+	background-color: rgba(242, 237, 228, 0.85);
+	border-radius: 10px;
+	padding: 25px 25px;
+	margin: 15px 15px;
+}
+
+.containerActivities {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.15fr 1fr 0.05fr;
+	gap: 5px 5px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	"sampleImage ."
+	"sampleImage information"
+	"sampleImage .";
+	width: auto;
+	height: auto;
+}
+
+.sampleImage {
+  grid-area: sampleImage;
+}
+
+.information {
+	grid-area: information;
+	margin: 25px;
+}
+
+.containerFestivals {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.15fr 1fr 1fr 0.15fr;
+	gap: 5px 5px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	". ."
+	"imageFestivals informationFestivals"
+	"imageFestivals informationFestivals"
+	"imageFestivals .";
+	width: auto;
+	height: auto;
+}
+
+.imageFestivals {
+  grid-area: imageFestivals;
+}
+
+.informationFestivals {
+	grid-area: informationFestivals;
+	margin: 25px;
+}
+
+.containerTravel {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.5fr 1fr 1fr 0.75fr;
+	gap: 5px 5px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	". ."
+	". sampleTimetable"
+	"informationTravel sampleTimetable"
+	". .";
+	width: auto;
+	height: auto;
+}
+
+.informationTravel {
+  grid-area: informationTravel;
+}
+
+.sampleTimetable {
+  grid-area: sampleTimetable;
+}
+
+table {
+	background-color: rgba(242, 237, 228, 0.85);
+	border-radius: 10px;
+	margin: 10px 10px;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(211, 186, 137, 0.85);
+  }
+/* creates the alternating stripe colours on the table; makes it easier to distinguish rows */
+
+@media screen and (max-width: 600px) {
+	body {
+		font-size: medium;
+	}
+
+	header > a > img {
+		width: 75px;
+		height: auto;
+	}
+	/* scales down the home logo to an appropriate size for mobile screens */
+
+	nav {
+		margin: 5px 5px;
+		padding: 10px 10px;
+		background-color: #F2EDE4;
+		border-radius: 10px;
+		display: inline;
+		float: right;
+		position: fixed;
+		right: 0;
+	}
+	
+	nav > a, nav > div {
+		margin: 5px 5px;
+		padding: 5px 10px;
+		float: right;
+		display: inline;
+		background-color: #D8CEBA;
+		border-radius: 5px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bolder;
+	}
+
+	.containerAbout {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 0.5fr 0.5fr;
+		gap: 0px 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"."
+		"about"
+		".";
+		width: auto;
+		height: auto;
+	}
+
+	.containerActivities {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.15fr 0.5fr 1fr;
+		gap: 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"."
+		"sampleImage"
+		"information";
+		width: auto;
+		height: auto;
+	}
+
+	.containerFestivals {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.15fr 0.5fr 1fr;
+		gap: 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"."
+		"imageFestivals"
+		"informationFestivals";
+		width: auto;
+		height: auto;
+	}
+
+	.containerTravel {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.75fr 0.5fr 1fr 0.5fr;
+		gap: 5px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"."
+		"informationTravel"
+		"sampleTimetable"
+		".";
+		width: auto;
+		height: auto;
+	}
+	
+	.containerForm {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 5px 5px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"usernameEmail"
+		"submitButton";
+		width: auto;
+		height: auto;
+	}
+    
+	.containerFooter {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 0.5fr;
+		gap: 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"newsletter"
+		"links";
+		width: auto;
+		height: auto;
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+	nav {
+		margin: 5px 5px;
+		padding: 10px 10px;
+		background-color: #F2EDE4;
+		border-radius: 10px;
+		display: inline;
+		float: right;
+		position: fixed;
+		right: 0;
+	}
+
+	nav > a, nav > div {
+		margin: 10px 10px;
+		padding: 10px 10px;
+		float: right;
+		display: inline;
+		background-color: #D8CEBA;
+		border-radius: 5px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bolder;
+	}
+
+	.containerAbout {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 0.5fr 0.5fr;
+		gap: 0px 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"."
+		"about"
+		".";
+		width: auto;
+		height: auto;
+	}
+
+	.containerActivities {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.15fr 0.5fr 0.5fr;
+		gap: 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"."
+		"sampleImage"
+		"information";
+		width: auto;
+		height: auto;
+	}
+
+	.containerFestivals {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.15fr 0.5fr 0.5fr;
+		gap: 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"."
+		"imageFestivals"
+		"informationFestivals";
+		width: auto;
+		height: auto;
+	}
+
+	.containerTravel {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.75fr 0.5fr 1fr 0.5fr;
+		gap: 5px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"."
+		"informationTravel"
+		"sampleTimetable"
+		".";
+		width: auto;
+		height: auto;
+	}
+
+	.containerForm {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 5px 5px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"usernameEmail"
+		"submitButton";
+		width: auto;
+		height: auto;
+	}
+	
+	.containerFooter {
+		display: grid;
+		grid-template-columns: 1fr 0.25fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 0px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		"newsletter . links";
+		width: auto;
+		height: auto;
+	}
+}
+
+/* included so the submit button for the newsletter is spaced as desired on laptop screens & wider */
+@media screen and (min-width: 1001px) {
+	#submit {
+		margin: auto auto auto 15px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	nav {
+		margin: 5px 5px;
+		padding: 5px 5px;
+		background-color: #F2EDE4;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column-reverse;
+		float: right;
+		position: fixed;
+		right: 0;
+	}
+	
+	nav > a, nav > div {
+		margin: 8px 5px;
+		padding: 5px 10px;
+		float: right;
+		display: inline;
+		background-color: #D8CEBA;
+		border-radius: 5px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bolder;
+		text-align: center;
+	}
+
+	.headingMargin {
+		margin-top: 100px;
+	}
+	/* margin included to accomodate the now-vertical navigation bar so the headings are visible */
+}

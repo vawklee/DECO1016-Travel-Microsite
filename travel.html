@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> How to travel to Cheung Chau </title>
+			<link rel="stylesheet" type="text/css" href="style.css">
+			<link rel="icon" type="image/x-icon" href="images/web_icon.ico">
+
+			<meta charset="UTF-8">
+			<meta name="description" content="Information about Cheung Chau">
+			<meta name="keywords" content="Hong Kong, Cheung Chau, Island, Travel">
+			<meta name="author" content="Veronica L">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+			<style>
+				body {
+					background-image: url('images/Cheung_Chau_Ferry.jpg');
+					background-size: cover;
+					background-attachment: fixed;
+					background-repeat: no-repeat;
+				}
+			</style>
+			<!-- specific style inserted into html for specific background image -->
+	</head>
+	<body>
+		<header>
+			<a href="index.html" id="logo"> <img src="images/web_logo.png" alt="Simplistic icon of a brown boat with a red flag on a pole"> </a>
+			<nav>
+				<a href="travel.html"> Travel </a>
+				<a href="festivals.html"> Festivals </a>
+				<div class="dropdown">
+					<a href="activities.html" class="activitiesDropdown"> Activities</a>
+					<div class="activitiesContent">
+						<a href="activities.html">Beaches</a>
+						<a href="activities.html#Hiking">Hiking</a>
+						<a href="activities.html#FoodDrink">Food & Drink</a>
+						<a href="activities.html#Biking">Bike Riding</a>
+						<a href="activities.html#Explore">Explore</a>
+					</div>
+				</div>
+				<!-- div used to separate the hyperlinks to make the dropdown menu possible -->
+			</nav>
+    </header>
+
+    <hr> <hr> <hr>
+    
+		<h1 class="headingMargin"> Ferry Services </h1>
+		<div class="containerTravel">
+			<article class="informationTravel">
+				<p>
+					You have to travel by ferry to get to Cheung Chau, and the only ferry service departs from the Central station Pier #5 approximately every half an hour (Central is accessible via the Mass Transit Railway service across Hong Kong). <br> <br> There is a slow and fast ferry service, with fares depending on the service you choose to take. Ferry services begin to depart from Hong Kong at 1:30am, with the ending service being at 12:30am. Services departing from Cheung Chau begin at 2:20am and end at 11:45pm, with the trip duration varying between 30 to 60 minutes depending on the service.
+				</p>
+			</article>
+
+			<!-- table is coded into the website instead of using an image -->
+			<table class="sampleTimetable">
+				<tr>
+					<th>Departing from Hong Kong</th>
+					<th>Departing from Cheung Chau</th>
+				</tr>
+				<tr>
+					<td>1:30</td>
+					<td>2:20</td>
+				</tr>
+				<tr>
+					<td>2:00</td>
+					<td>2:50</td>
+				</tr>
+				<tr>
+					<td>2:30</td>
+					<td>3:20</td>
+				</tr>
+				<tr>
+					<td>3:00</td>
+					<td>3:50</td>
+				</tr>
+				<tr>
+					<td>. . .</td>
+					<td>. . .</td>
+				</tr>
+				<tr>
+					<td>22:30</td>
+					<td>21:45</td>
+				</tr>
+				<tr>
+					<td>23:00</td>
+					<td>22:15</td>
+				</tr>
+				<tr>
+					<td>23:30</td>
+					<td>22:45</td>
+				</tr>
+				<tr>
+					<td>00:00</td>
+					<td>23:15</td>
+				</tr>
+				<tr>
+					<td>0:30<br>(Last service)</td>
+					<td>23:45<br>(Last service)</td>
+				</tr>
+			</table>
+    </div>
+		<footer class="containerFooter">
+			<section class="newsletter">
+				<h2> Subscribe to our newsletter! </h2>
+				<p> You will receive information about upcoming events and festivals on Cheung Chau, as well as recommendations on the best time to travel to the island! </p>
+				<form class="containerForm">
+					<div class="usernameEmail">
+						<label for="name"> Enter your name </label> <br>
+						<input type="text" id="username" name="firstName" minlength="1"> <br>
+
+						<label for="email"> Enter your E-mail </label> <br>
+						<input type="email" id="email" name="email"> <br>
+					</div>
+					<div class="submitButton">
+						<input type="submit" id="submit" value="Subscribe">
+						<!-- type="submit" reloads the page ?? -->
+					</div>
+				</form>
+			</section>
+			<section class="links">
+				<h2> Links: </h2>
+				<a href="travel.html">Top of Page</a> <br> <br>
+				<a href="index.html">Homepage</a> <br> <br>
+				<a href="activities.html">Activities</a> <br> <br>
+				<a href="festivals.html">Festivals</a> <br> <br> 
+			</section>
+    </footer>
+	</body>
+</html>
